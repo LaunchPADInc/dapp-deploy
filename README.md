@@ -1,4 +1,6 @@
-### [dapp-deploy](https://github.com/warren-bank/dapp-deploy)
+## Description
+
+***Everything contained in this repository is in draft form and subject to change at any time and provided for information purposes only.  LaunchPAD does not guarantee the accuracy of the information contained in this repository and the information is provided “as is” with no representations or warranties, express or implied. This code is owned and copyrighted by LaunchPAD and cannot be used by anyone for any purpose.***
 
 #### Description:
 
@@ -12,7 +14,7 @@ Command-line tool to:
 #### Installation:
 
 ```bash
-npm install -g @warren-bank/dapp-deploy
+npm install -g @launchpadinc/dapp-deploy
 ```
 
 *aside:*
@@ -108,15 +110,15 @@ Examples:
   dapp-deploy -c Foo --lib 'Bar=0x12345' 'Baz=0x98765'                                                                               deploy contract: "Foo"
                                                                                                                                      link to libraries: "Bar" at address: "0x12345", "Baz" at address: "0x98765"
   dapp-deploy -c Foo --lib '{{Lib1}}' '{{Lib2,./out/}}' '{{Lib3,./out/Lib3.deployed}}'                                               equivalent ways to reference metadata stored in the default '--output_directory'
-  dapp-deploy -c Foo --lib "{{Lib4, $HOME/ethereum/libs/v1.0.0/}}" '{{Lib5, /home/warren/ethereum/libs/v1.0.1/Lib5.deployed.json}}'  versioning of libraries, referencing absolute paths, using custom filenames
+  dapp-deploy -c Foo --lib "{{Lib4, $HOME/ethereum/libs/v1.0.0/}}" '{{Lib5, /home/launchpadinc/ethereum/libs/v1.0.1/Lib5.deployed.json}}'  versioning of libraries, referencing absolute paths, using custom filenames
   dapp-deploy -c Foo Bar Baz                                                                                                         deploy contracts: ["Foo","Bar","Baz"]
   dapp-deploy -c Foo -o "$HOME/Dapp_frontend/contracts"                                                                              generate: "~/Dapp_frontend/contracts/Foo.deployed"
   dapp-deploy -c Foo -O "$HOME/Dapp_frontend/contracts/{{contract}}.deployed.json"                                                   generate: "~/Dapp_frontend/contracts/Foo.deployed.json"
   dapp-deploy -c Foo -i "$HOME/Dapp_contracts/out" -O "./contracts/{{contract}}.deployed.json"                                       deploy contract: "~/Dapp_contracts/out/Foo.bin"
                                                                                                                                      and generate: "./contracts/Foo.deployed.json"
 
-copyright: Warren Bank <github.com/warren-bank>
-license: GPLv2
+copyright: LaunchPAD Inc. <github.com/launchpadinc>
+license: 
 ```
 
 #### Notes:
@@ -212,8 +214,3 @@ license: GPLv2
         Though it could be used solely for generating deployment metadata,<br>
         which could then be consumed elsewhere,<br>
         I don't think that makes for a pleasant (or efficient) workflow.
-
-#### Legal:
-
-* copyright: [Warren Bank](https://github.com/warren-bank)
-* license: [GPLv2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.txt)
